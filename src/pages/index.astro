@@ -1,21 +1,87 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import ContextAlert from '../components/ContextAlert.astro';
-import Markdown from '../components/Markdown.astro';
-
-const explainer = `
-An Astro website can go way beyond static pages - on the right platform.
-
-Netlify supports not only [Streaming SSR](https://docs.astro.build/en/guides/server-side-rendering/#html-streaming) and fast [Edge Middleware](https://docs.astro.build/en/guides/middleware/), but also [on-demand revalidation](https://www.netlify.com/blog/cache-tags-and-purge-api-on-netlify/) and [stale-while-revalidate](https://www.netlify.com/blog/swr-and-fine-grained-cache-control/). 
-Any page or data can be rebuilt only when needed, without site visitors ever getting a performance hit.
-`;
+import "../styles/global.css";
 ---
 
-<Layout title="Welcome to Astro.">
-    <ContextAlert class="mb-8" />
-    <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
-    <Markdown content={explainer} class="mb-10 text-lg" />
-    <p>
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg sm:min-w-64">Read the Docs</a>
-    </p>
-</Layout>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>만나 심리상담센터</title>
+  </head>
+
+  <body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+    <!-- 헤더 -->
+    <header class="bg-white shadow-md py-4 sticky top-0 z-10">
+      <div class="container mx-auto flex justify-between items-center px-6">
+        <h1 class="text-2xl font-bold text-blue-700">만나 심리상담센터</h1>
+        <nav class="space-x-6">
+          <a href="#about" class="hover:text-blue-600">센터소개</a>
+          <a href="#programs" class="hover:text-blue-600">상담분야</a>
+          <a href="#contact" class="hover:text-blue-600">문의하기</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 메인 섹션 -->
+    <section class="text-center py-24 bg-gradient-to-b from-blue-100 to-white">
+      <h2 class="text-4xl font-bold mb-6">마음을 회복하는 첫걸음, 만나에서 시작하세요</h2>
+      <p class="text-lg text-gray-600 mb-8">
+        불안, 우울, 관계의 어려움 속에서도 다시 균형을 찾을 수 있습니다.<br />
+        만나 심리상담센터는 여러분의 회복과 성장을 함께합니다.
+      </p>
+      <a href="#contact" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700">
+        상담 문의하기
+      </a>
+    </section>
+
+    <!-- 센터 소개 -->
+    <section id="about" class="container mx-auto px-6 py-16">
+      <h3 class="text-3xl font-semibold text-center mb-8">센터 소개</h3>
+      <p class="text-center max-w-3xl mx-auto text-gray-700 leading-relaxed">
+        만나 심리상담센터는 아동, 청소년, 성인을 대상으로 심리평가 및 맞춤형 상담을 제공합니다.<br />
+        마음의 문제를 단순히 해결하는 것을 넘어, 자신을 이해하고 회복할 수 있도록 돕습니다.
+      </p>
+    </section>
+
+    <!-- 상담 분야 -->
+    <section id="programs" class="bg-blue-50 py-16">
+      <div class="container mx-auto px-6">
+        <h3 class="text-3xl font-semibold text-center mb-10">상담 분야</h3>
+        <div class="grid md:grid-cols-3 gap-8 text-center">
+          <div class="bg-white shadow-md rounded-xl p-6">
+            <h4 class="font-bold text-lg mb-3 text-blue-700">아동·청소년 상담</h4>
+            <p class="text-gray-600">정서조절, 주의집중력, 자존감 향상 등 발달단계별 맞춤 상담</p>
+          </div>
+          <div class="bg-white shadow-md rounded-xl p-6">
+            <h4 class="font-bold text-lg mb-3 text-blue-700">성인 개인상담</h4>
+            <p class="text-gray-600">불안, 우울, 관계 문제, 자기이해를 중심으로 한 심층 상담</p>
+          </div>
+          <div class="bg-white shadow-md rounded-xl p-6">
+            <h4 class="font-bold text-lg mb-3 text-blue-700">부모·가족 상담</h4>
+            <p class="text-gray-600">가족 갈등, 양육 스트레스, 의사소통 문제를 함께 다루는 가족 상담</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 문의하기 -->
+    <section id="contact" class="container mx-auto px-6 py-16">
+      <h3 class="text-3xl font-semibold text-center mb-8">상담 문의</h3>
+      <div class="max-w-xl mx-auto text-center">
+        <p class="text-gray-700 mb-6">
+          📞 문의전화: <strong>070-4304-6500</strong><br />
+          📧 이메일: <strong>manna_2024@naver.com</strong><br />
+          🕒 운영시간: 월–금 10:00 ~ 19:00, 수 휴식
+        </p>
+        <a href="mailto:manna_center@email.com" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700">
+          이메일로 문의하기
+        </a>
+      </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="bg-gray-800 text-gray-200 text-center py-6 mt-16">
+      <p>© 2025 만나 심리상담센터 | 모든 권리 보유</p>
+    </footer>
+  </body>
+</html>
