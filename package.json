@@ -27,10 +27,10 @@
     "tailwindcss": "^4.0.14",
     "unique-names-generator": "^4.7.1"
   },
-  "devDependencies": {
-    "@types/blobshape": "^1.0.3",
-    "@types/node": "^20.12.7"
- 
-
-  }
+"devDependencies": {
+  "@types/blobshape": "^1.0.3",
+  "@types/node": "^20.12.7",
+  "autoprefixer": "^10.4.19",
+  "postcss": "^8.4.47"
+}
 }
